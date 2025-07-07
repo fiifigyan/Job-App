@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobFinder - Login</title>
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/auth.css">
+</head>
+<body>
+    <header>
+        <h1>JobFinder</h1>
+        <nav>
+            <ul>
+                <li><a href="/src/index.html">Home</a></li>
+                <li><a href="/src/jobs.html">Browse Jobs</a></li>
+            </ul>
+        </nav>
+        <div class="auth-section">
+            <a href="/src/login.html" class="auth-btn active">Login</a>
+            <a href="/src/signup.html" class="auth-btn primary">Register</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <h2>Login to Your Account</h2>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="auth-btn primary">Login</button>
+                <p class="form-footer">Don't have an account? <a href="/src/signup.html">Sign up</a></p>
+            </form>
+        </div>
+    </main>
+
+    <script src="/public/js/auth/auth.controller.js" type="module"></script>
+</body>
+</html>

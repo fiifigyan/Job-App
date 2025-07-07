@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobFinder - Find Your Dream Job</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/home.css">
+</head>
+<body>
+    <header class="glass-header">
+        <div class="container">
+            <a href="/src/index.html" class="logo">
+                <i class="fas fa-search-dollar"></i>
+                <span>JobFinder</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/src/index.html" class="active">Home</a></li>
+                    <li><a href="/src/jobs.html">Browse Jobs</a></li>
+                    <li><a href="/src/companies.html">Companies</a></li>
+                    <li><a href="/src/career-resources.html">Career Resources</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="auth-section" id="authSection">
+                    <!-- Dynamically filled by auth.views.js -->
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Find Your <span class="highlight">Dream Job</span> Today</h1>
+                    <p class="subtitle">Join thousands of companies and candidates finding perfect matches</p>
+                    
+                    <div class="search-box">
+                        <div class="search-input">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="jobSearchInput" placeholder="Job title, keywords, or company">
+                        </div>
+                        <div class="search-input">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" id="locationInput" placeholder="Location or remote">
+                        </div>
+                        <button class="search-btn" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                            <span>Search</span>
+                        </button>
+                    </div>
+                    
+                    <div class="quick-filters">
+                        <span>Popular:</span>
+                        <a href="#">Remote</a>
+                        <a href="#">Frontend</a>
+                        <a href="#">Fullstack</a>
+                        <a href="#">UX/UI</a>
+                        <a href="#">Data Science</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="/public/images/hero-illustration.svg" alt="Job search illustration">
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose JobFinder?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Quick Apply</h3>
+                        <p>Apply to jobs with just one click using your profile</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h3>Smart Alerts</h3>
+                        <p>Get notified when matching jobs are posted</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Salary Insights</h3>
+                        <p>See salary ranges before applying</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Verified Companies</h3>
+                        <p>Only legitimate employers and opportunities</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trending-jobs">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Trending Jobs</h2>
+                    <a href="/src/jobs.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="jobs-grid" id="trendingJobs">
+                    <!-- Filled dynamically by JS -->
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Success Stories</h2>
+                <div class="testimonials-slider">
+                    <!-- Testimonial cards will be added here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-search-dollar"></i>
+                        <span>JobFinder</span>
+                    </div>
+                    <p>Connecting talent with opportunity since 2023</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>For Job Seekers</h3>
+                    <ul>
+                        <li><a href="/src/jobs.html">Browse Jobs</a></li>
+                        <li><a href="/src/companies.html">Company Reviews</a></li>
+                        <li><a href="#">Salary Calculator</a></li>
+                        <li><a href="#">Career Advice</a></li>
+                        <li><a href="#">Resume Builder</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>For Employers</h3>
+                    <ul>
+                        <li><a href="#">Post a Job</a></li>
+                        <li><a href="#">Browse Candidates</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Recruiting Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 JobFinder. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/public/js/main.js" type="module"></script>
+    <script src="/public/js/home.js" type="module"></script>
+</body>
+</html>
