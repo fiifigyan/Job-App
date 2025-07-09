@@ -18,6 +18,12 @@
     --border-radius: 8px;
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+
+        /* Spacing Variables */
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
 }
 
 /* Dark mode variables */
@@ -35,6 +41,12 @@
     --bg-dark: #121212;
     
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #f8f9fa;
+    --text-secondary: #adb5bd;
+    --border-color: #343a40;
 }
 
 * {
