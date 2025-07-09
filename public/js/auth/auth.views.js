@@ -136,6 +136,7 @@ export class AuthViews {
             this.updateAuthUI(authService.currentUser);
         } catch (error) {
             console.error('Auth initialization error:', error);
+            this.updateAuthUI(null);
         }
     }
 }

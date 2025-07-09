@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile | JobFinder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/company.css">
+</head>
+<body>
+    <header class="glass-header">
+        <div class="container">
+            <a href="/src/index.html" class="logo">
+                <i class="fas fa-search-dollar"></i>
+                <span>JobFinder</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/src/index.html">Home</a></li>
+                    <li><a href="/src/jobs.html">Browse Jobs</a></li>
+                    <li><a href="/src/companies.html" class="active">Companies</a></li>
+                    <li><a href="/src/career-resources.html">Career Resources</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="auth-section" id="authSection">
+                    <!-- Dynamically filled by auth.views.js -->
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="company-page">
+        <div class="container">
+            <div class="company-header">
+                <div class="company-logo">
+                    <img src="/public/images/company-logos/techcorp.png" alt="TechCorp Logo" id="companyLogo">
+                </div>
+                <div class="company-info">
+                    <h1 id="companyName">TechCorp Inc.</h1>
+                    <div class="company-meta">
+                        <span id="companyIndustry">Software Development</span>
+                        <span id="companyLocation"><i class="fas fa-map-marker-alt"></i> San Francisco, CA</span>
+                        <span id="companySize"><i class="fas fa-users"></i> 201-500 employees</span>
+                        <a href="#" id="companyWebsite" target="_blank"><i class="fas fa-globe"></i> Company Website</a>
+                    </div>
+                    <div class="company-actions">
+                        <button class="btn btn-secondary" id="followCompany">
+                            <i class="far fa-bell"></i> Follow
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="company-content">
+                <div class="company-main">
+                    <section class="company-about">
+                        <h2>About Us</h2>
+                        <div id="companyDescription">
+                            <!-- Filled by JS -->
+                        </div>
+                    </section>
+
+                    <section class="company-jobs">
+                        <div class="section-header">
+                            <h2>Open Positions</h2>
+                            <span class="jobs-count" id="companyJobsCount">5 jobs</span>
+                        </div>
+                        <div class="jobs-list" id="companyJobsList">
+                            <!-- Filled by JS -->
+                        </div>
+                    </section>
+
+                    <section class="company-reviews">
+                        <h2>Employee Reviews</h2>
+                        <div class="reviews-list" id="companyReviews">
+                            <!-- Filled by JS -->
+                        </div>
+                    </section>
+                </div>
+
+                <aside class="company-sidebar">
+                    <div class="company-stats">
+                        <h3>Company Stats</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-value" id="foundedYear">2015</span>
+                                <span class="stat-label">Founded</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" id="employeeCount">350</span>
+                                <span class="stat-label">Employees</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" id="openJobs">5</span>
+                                <span class="stat-label">Open Jobs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="company-locations">
+                        <h3>Locations</h3>
+                        <ul id="companyLocations">
+                            <!-- Filled by JS -->
+                        </ul>
+                    </div>
+
+                    <div class="company-benefits">
+                        <h3>Employee Benefits</h3>
+                        <ul id="companyBenefits">
+                            <!-- Filled by JS -->
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-search-dollar"></i>
+                        <span>JobFinder</span>
+                    </div>
+                    <p>Connecting talent with opportunity since 2023</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>For Job Seekers</h3>
+                    <ul>
+                        <li><a href="/src/jobs.html">Browse Jobs</a></li>
+                        <li><a href="/src/companies.html">Company Reviews</a></li>
+                        <li><a href="#">Salary Calculator</a></li>
+                        <li><a href="#">Career Advice</a></li>
+                        <li><a href="#">Resume Builder</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>For Employers</h3>
+                    <ul>
+                        <li><a href="#">Post a Job</a></li>
+                        <li><a href="#">Browse Candidates</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Recruiting Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 JobFinder. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/public/js/main.js" type="module"></script>
+    <script src="/public/js/company/company.controller.js" type="module"></script>
+</body>
+</html>

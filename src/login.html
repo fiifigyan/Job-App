@@ -1,45 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JobFinder - Login</title>
+    <title>Login | JobFinder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/public/css/main.css">
     <link rel="stylesheet" href="/public/css/auth.css">
 </head>
 <body>
-    <header>
-        <h1>JobFinder</h1>
-        <nav>
-            <ul>
-                <li><a href="/src/index.html">Home</a></li>
-                <li><a href="/src/jobs.html">Browse Jobs</a></li>
-            </ul>
-        </nav>
-        <div class="auth-section">
-            <a href="/src/login.html" class="auth-btn active">Login</a>
-            <a href="/src/signup.html" class="auth-btn primary">Register</a>
-        </div>
+    <header class="glass-header">
+        <!-- Same header -->
     </header>
 
-    <main>
-        <div class="auth-container">
-            <h2>Login to Your Account</h2>
-            <form id="loginForm" class="auth-form">
-                <div class="form-group">
-                    <label for="loginEmail">Email</label>
-                    <input type="email" id="loginEmail" required>
+    <main class="auth-page">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <h2>Welcome Back</h2>
+                    <p>Login to access your JobFinder account</p>
                 </div>
-                <div class="form-group">
-                    <label for="loginPassword">Password</label>
-                    <input type="password" id="loginPassword" required>
+
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="loginEmail" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="loginPassword" name="password" required>
+                            <button type="button" class="toggle-password" aria-label="Show password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="form-extra">
+                            <a href="/forgot-password.html" class="forgot-password">Forgot password?</a>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Login
+                    </button>
+
+                    <div class="auth-footer">
+                        Don't have an account? <a href="/signup.html">Sign up</a>
+                    </div>
+                </form>
+
+                <div class="auth-divider">
+                    <span>or</span>
                 </div>
-                <button type="submit" class="auth-btn primary">Login</button>
-                <p class="form-footer">Don't have an account? <a href="/src/signup.html">Sign up</a></p>
-            </form>
+
+                <div class="social-auth">
+                    <button class="btn btn-google">
+                        <i class="fab fa-google"></i> Continue with Google
+                    </button>
+                    <button class="btn btn-linkedin">
+                        <i class="fab fa-linkedin"></i> Continue with LinkedIn
+                    </button>
+                </div>
+            </div>
         </div>
     </main>
 
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-search-dollar"></i>
+                        <span>JobFinder</span>
+                    </div>
+                    <p>Connecting talent with opportunity since 2023</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>For Job Seekers</h3>
+                    <ul>
+                        <li><a href="/src/jobs.html">Browse Jobs</a></li>
+                        <li><a href="/src/companies.html">Company Reviews</a></li>
+                        <li><a href="#">Salary Calculator</a></li>
+                        <li><a href="#">Career Advice</a></li>
+                        <li><a href="#">Resume Builder</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>For Employers</h3>
+                    <ul>
+                        <li><a href="#">Post a Job</a></li>
+                        <li><a href="#">Browse Candidates</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Recruiting Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 JobFinder. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/public/js/main.js" type="module"></script>
     <script src="/public/js/auth/auth.controller.js" type="module"></script>
 </body>
 </html>

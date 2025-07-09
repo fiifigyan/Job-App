@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details | JobFinder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/job-details.css">
+</head>
+<body>
+    <header class="glass-header">
+        <div class="container">
+            <a href="/src/index.html" class="logo">
+                <i class="fas fa-search-dollar"></i>
+                <span>JobFinder</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/src/index.html">Home</a></li>
+                    <li><a href="/src/jobs.html">Browse Jobs</a></li>
+                    <li><a href="/src/companies.html" class="active">Companies</a></li>
+                    <li><a href="/src/career-resources.html">Career Resources</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="auth-section" id="authSection">
+                    <!-- Dynamically filled by auth.views.js -->
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="job-details-page">
+        <div class="container">
+            <div class="job-details-container">
+                <div class="job-main">
+                    <div class="job-header">
+                        <h1 id="jobTitle">Senior Frontend Developer</h1>
+                        <div class="job-meta">
+                            <span class="company" id="jobCompany">TechCorp Inc.</span>
+                            <span class="location" id="jobLocation"><i class="fas fa-map-marker-alt"></i> Remote</span>
+                            <span class="type" id="jobType"><i class="fas fa-clock"></i> Full-time</span>
+                            <span class="salary" id="jobSalary"><i class="fas fa-dollar-sign"></i> $90,000 - $120,000</span>
+                        </div>
+                        <div class="job-actions">
+                            <button class="btn btn-secondary" id="saveJob">
+                                <i class="far fa-bookmark"></i> Save
+                            </button>
+                            <button class="btn btn-primary" id="applyNow">
+                                Apply Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="job-content">
+                        <div class="job-section">
+                            <h2>Job Description</h2>
+                            <div id="jobDescription">
+                                <!-- Filled by JS -->
+                            </div>
+                        </div>
+
+                        <div class="job-section">
+                            <h2>Requirements</h2>
+                            <ul id="jobRequirements">
+                                <!-- Filled by JS -->
+                            </ul>
+                        </div>
+
+                        <div class="job-section">
+                            <h2>Benefits</h2>
+                            <ul id="jobBenefits">
+                                <!-- Filled by JS -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="job-sidebar">
+                    <div class="company-card">
+                        <div class="company-logo">
+                            <img src="/public/images/company-logos/techcorp.png" alt="TechCorp Logo" id="companyLogo">
+                        </div>
+                        <h3 id="companyName">TechCorp Inc.</h3>
+                        <div class="company-info">
+                            <p id="companyIndustry">Software Development</p>
+                            <p id="companySize">201-500 employees</p>
+                            <p id="companyWebsite">
+                                <a href="#" target="_blank" id="companyWebsiteLink">
+                                    <i class="fas fa-globe"></i> Visit website
+                                </a>
+                            </p>
+                        </div>
+                        <a href="/company.html?id=techcorp" class="btn btn-secondary btn-block">
+                            View Company Profile
+                        </a>
+                    </div>
+
+                    <div class="similar-jobs">
+                        <h3>Similar Jobs</h3>
+                        <div class="similar-jobs-list" id="similarJobs">
+                            <!-- Filled by JS -->
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Application Modal -->
+    <div class="modal" id="applicationModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Apply for <span id="modalJobTitle"></span></h2>
+            <form id="applicationForm">
+                <!-- Form fields -->
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-search-dollar"></i>
+                        <span>JobFinder</span>
+                    </div>
+                    <p>Connecting talent with opportunity since 2023</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>For Job Seekers</h3>
+                    <ul>
+                        <li><a href="/src/jobs.html">Browse Jobs</a></li>
+                        <li><a href="/src/companies.html">Company Reviews</a></li>
+                        <li><a href="#">Salary Calculator</a></li>
+                        <li><a href="#">Career Advice</a></li>
+                        <li><a href="#">Resume Builder</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>For Employers</h3>
+                    <ul>
+                        <li><a href="#">Post a Job</a></li>
+                        <li><a href="#">Browse Candidates</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Recruiting Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 JobFinder. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/public/js/main.js" type="module"></script>
+    <script src="/public/js/job-details/job-details.controller.js" type="module"></script>
+</body>
+</html>

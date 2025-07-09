@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Resources | JobFinder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/career-resources.css">
+</head>
+<body>
+    <header class="glass-header">
+        <div class="container">
+            <a href="/src/index.html" class="logo">
+                <i class="fas fa-search-dollar"></i>
+                <span>JobFinder</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/src/index.html">Home</a></li>
+                    <li><a href="/src/jobs.html">Browse Jobs</a></li>
+                    <li><a href="/src/companies.html">Companies</a></li>
+                    <li><a href="/src/career-resources.html" class="active">Career Resources</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="auth-section" id="authSection">
+                    <!-- Dynamically filled by auth.views.js -->
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="resources-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Career Resources</h1>
+                <p>Tools and advice to help you in your job search</p>
+            </div>
+
+            <div class="resources-categories">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Resume Builder</h3>
+                    <p>Create a professional resume in minutes</p>
+                    <a href="/resume-builder.html" class="btn btn-secondary">Get Started</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Interview Prep</h3>
+                    <p>Practice common interview questions</p>
+                    <a href="/interview-prep.html" class="btn btn-secondary">Start Practicing</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Salary Calculator</h3>
+                    <p>See what you should be earning</p>
+                    <a href="/salary-calculator.html" class="btn btn-secondary">Calculate Now</a>
+                </div>
+            </div>
+
+            <section class="articles-section">
+                <h2>Latest Career Advice</h2>
+                <div class="articles-grid" id="careerArticles">
+                    <!-- Filled by JS -->
+                </div>
+            </section>
+
+            <section class="tools-section">
+                <h2>Job Search Tools</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <h3>Job Search Tracker</h3>
+                        <p>Keep track of all your applications in one place</p>
+                        <a href="/job-tracker.html" class="btn btn-secondary">Start Tracking</a>
+                    </div>
+                    <div class="tool-card">
+                        <h3>Cover Letter Generator</h3>
+                        <p>Create personalized cover letters quickly</p>
+                        <a href="/cover-letter.html" class="btn btn-secondary">Generate Now</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-search-dollar"></i>
+                        <span>JobFinder</span>
+                    </div>
+                    <p>Connecting talent with opportunity since 2023</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>For Job Seekers</h3>
+                    <ul>
+                        <li><a href="/src/jobs.html">Browse Jobs</a></li>
+                        <li><a href="/src/companies.html">Company Reviews</a></li>
+                        <li><a href="#">Salary Calculator</a></li>
+                        <li><a href="#">Career Advice</a></li>
+                        <li><a href="#">Resume Builder</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>For Employers</h3>
+                    <ul>
+                        <li><a href="#">Post a Job</a></li>
+                        <li><a href="#">Browse Candidates</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Recruiting Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 JobFinder. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/public/js/main.js" type="module"></script>
+    <script src="/public/js/career-resources/career-resources.controller.js" type="module"></script>
+</body>
+</html>
